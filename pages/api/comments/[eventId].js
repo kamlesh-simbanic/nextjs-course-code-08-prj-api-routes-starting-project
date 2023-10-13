@@ -5,7 +5,7 @@ function handler(req, res) {
     const { name, email, text } = req.body;
 
     if (
-      email.includes("@") ||
+      !email.includes("@") ||
       !name ||
       name.trim() == "" ||
       !text ||
@@ -27,8 +27,8 @@ function handler(req, res) {
 
   if (req.method === "GET") {
     const dummyList = [
-      { id: "c1", name: "Max", comment: "A First Comment" },
-      { id: "c2", name: "Max", comment: "A Second Comment" },
+      { id: "c1", name: "Max", text: "A First Comment" },
+      { id: "c2", name: "Max", text: "A Second Comment" },
     ];
 
     res.status(200).json({ comments: dummyList });
