@@ -42,7 +42,13 @@ async function handler(req, res) {
       { id: "c2", name: "Max", text: "A Second Comment" },
     ];
 
-    res.status(200).json({ comments: dummyList });
+    const documents = await db
+      .collection("comments")
+      .find()
+      .sort({ _id: -1 })
+      .toArray();
+
+    res.status(200).json({ comments: documents });
   }
 
   client.close();
