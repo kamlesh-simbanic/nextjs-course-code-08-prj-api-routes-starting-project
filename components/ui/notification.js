@@ -17,7 +17,7 @@ function Notification(props) {
   if (status === "error") {
     statusClasses = classes.error;
   }
-
+  
   if (status === "pending") {
     statusClasses = classes.pending;
   }
