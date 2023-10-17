@@ -1,4 +1,4 @@
-import { connectDatabase, insertDocument } from "../../../helpers/db-utils";
+import { connectDatabase, insertDocument } from "../../helpers/db-utils";
 
 async function handler(req, res) {
   if (req.method == "POST") {

@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <NotificationContextProvider>
       <Layout>
-        <Head>  
+        <Head>
           <title>Next Events</title>
           <meta name="description" content="NextJS Events" />
           <meta
