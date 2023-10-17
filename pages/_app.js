@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 import Layout from "../components/layout/layout";
-import Notification from "../components/notification/notification";
+
 import "../styles/globals.css";
 import { NotificationContextProvider } from "../store/notification-context";
 
@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <NotificationContextProvider>
       <Layout>
-        <Head>
+        <Head>  
           <title>Next Events</title>
           <meta name="description" content="NextJS Events" />
           <meta
@@ -18,7 +18,6 @@ function MyApp({ Component, pageProps }) {
           />
         </Head>
         <Component {...pageProps} />
-        <Notification title="Test" message="This is Test" status={"error"} />
       </Layout>
     </NotificationContextProvider>
   );
